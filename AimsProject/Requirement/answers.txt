@@ -1,0 +1,31 @@
+-- Compare the top-level containers in Swing and AWT
+
+Container cấp cao nhất trong đoạn mã AWTAccumulator là java.awt.Frame. Lớp AWTAccumulator kế thừa trực tiếp từ Frame.
+Container cấp cao nhất trong đoạn mã SwingAccumulator là javax.swing.JFrame. Lớp SwingAccumulator kế thừa từ JFrame.
+Khác với AWT, các thành phần Swing không được thêm trực tiếp vào JFrame. Thay vào đó, chúng được thêm vào một "content pane" của JFrame.
+
+-- Compare the class name of components in AWT and the corresponding class’s name in Swing
+
+Label (Nhãn hiển thị văn bản):
+AWT: java.awt.Label
+Ví dụ: add (new Label("Enter an Integer: "));
+Swing: javax.swing.JLabel (thường có chữ "J" ở đầu)
+Ví dụ: cp.add (new JLabel("Enter an Integer: "));
+
+TextField (Ô nhập liệu văn bản):
+AWT: java.awt.TextField
+Ví dụ: tfInput = new TextField (10);
+Swing: javax.swing.JTextField (thường có chữ "J" ở đầu)
+Ví dụ: tfInput = new JTextField (10);
+
+Quy tắc chung: Có nhiều thành phần Swing có tên tương tự như các thành phần AWT tương ứng, nhưng có tiền tố là chữ "J" (ví dụ: Frame -> JFrame, Dialog -> JDialog, Button -> JButton, Label -> JLabel, TextField -> JTextField, Panel -> JPanel).
+
+-- Compare the event-handling of Swing and AWT applications
+
+Event-handling cho ActionEvent trên TextField (AWT) và JTextField (Swing) là giống nhau.
+
+Cả hai đều sử dụng mô hình "delegation event model" của Java.
+
+-- The resulting appearances of the applications developed using Swing and AWT might be different as well. Make comparisons.
+
+Appearances trên máy tính với hệ điều hành macOS của em thì sự khác biệt là không có.
